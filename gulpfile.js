@@ -41,7 +41,7 @@ gulp.task('build-js', function () {
 
 // Less to CSS: Run manually with: "gulp build-css"
 gulp.task('build-css', function () {
-    return gulp.src('assets/less/*.less')
+    return gulp.src('less/style.less')
         .pipe(plugins.plumber())
         .pipe(plugins.less())
         .on('error', function (err) {
@@ -63,14 +63,14 @@ gulp.task('build-css', function () {
             cascade: false
         }))
         .pipe(plugins.cssmin())
-        .pipe(gulp.dest('build')).on('error', gutil.log);
+        .pipe(gulp.dest('./')).on('error', gutil.log);
 });
 
 // Default task
 gulp.task('watch', function () {
     gulp.watch('assets/js/libs/**/*.js', ['squish-jquery']);
     gulp.watch('assets/js/*.js', ['build-js']);
-    gulp.watch('assets/less/**/*.less', ['build-css']);
+    gulp.watch('less/*.less', ['build-css']);
 });
 
 // Folder "/" serving at http://localhost:8888
