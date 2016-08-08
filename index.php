@@ -30,8 +30,12 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; ?>
-
-			<?php _s_paging_nav(); ?>
+		
+			<?php 
+			//ham phan trang
+				
+				page_nav();
+			 ?>
 
 		<?php else : ?>
 
@@ -42,5 +46,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

@@ -98,3 +98,68 @@
 	text-align: right;
 	width: 50%;
 }
+header#masthead{
+	background-color: @color7;
+	padding-bottom: 80px;
+}
+header{
+	.site-branding{
+		margin-top: 40px;
+		float: right;
+		h1.site-title{
+			font-size: 42px;
+			text-transform: capitalize;
+			 font-family: "Lato BoldItalic";
+			a{
+				color: @color1;
+				text-decoration: none;
+			}
+		}		
+	}
+	nav{
+		ul#menu-primary-menu {
+			margin-top: 80px;
+			float: right;
+			margin-right: -50px;
+			li.menu-item{
+				font-family: "Lato Bold";
+				font-size: 16px;
+				text-transform: uppercase;
+				margin-right: 30px;
+				a{
+					color: @color1;
+					text-decoration: none;
+					&:hover{
+						color: @color2;
+					}
+				}
+			}
+		}
+	}
+	i.fa.fa-search{
+		position: relative;
+		font-size: 16px;
+		top: 85px;
+		float: right;
+		right: 100px;
+		.search-form{
+		display: none;
+	}&:hover{
+		float: left;
+		left: 0;
+		color: @color2;
+			.search-form{
+				display: block;
+				margin-top: -20px;
+				input.search-submit {
+					position: absolute;
+					float: right;
+					right: 0;
+					top: -5px;
+				}
+			}
+		}
+	}
+}
+//css for the search
+
