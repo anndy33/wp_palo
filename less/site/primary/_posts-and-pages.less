@@ -28,16 +28,15 @@
 }
 
 //style for the stardard post
-article.format-standard{	
-	width: 80%;
-	left: 10%;
-	padding-top: 60px;
-	padding-bottom: 80px;
-	padding-left: 90px;
-	position: relative;
-	background-color: @color8;
+article.post{
 	box-shadow: 1px 0px 2px 2px #eceef1;
+	padding-bottom: 80px;
+	background-color: @color8;
 	margin-bottom: 100px;
+}
+article.format-standard{
+	padding-left: 90px;	
+	padding-top: 60px;	
 	header.entry-header {	
 		h1{
 			width: 90%;
@@ -62,17 +61,15 @@ article.format-standard{
 }
 // style for the image post
 article.post_format-post-format-image{
-margin-bottom: 100px;	
-	background-color: @color8;
-	width: 80%;
-	position: relative;
-	padding-bottom: 80px;
-	left: 10%;
-	box-shadow: 1px 0px 2px 2px #eceef1;
-	figure.post-thumbnail {
-		img{
-			width: 952px;
-			height: 537px;
+	.entry-thumbnail{
+		figure.post-thumbnail{
+			
+			img{
+				width: 100%;
+				height: auto;
+			}
+			margin-left: 0;
+			margin-right: 0;
 		}
 	}
 	header.entry-header {
@@ -111,13 +108,6 @@ margin-bottom: 100px;
 }
 // style for the video post
 article.post_format-post-format-video{
-	margin-bottom: 100px;
-	background-color: @color8;
-	width: 80%;
-	position: relative;
-	padding-bottom: 80px;
-	left: 10%;
-	box-shadow: 1px 0px 2px 2px #eceef1;
 	.entry-content p{
 		padding-bottom: 0;
 		iframe{
@@ -152,14 +142,7 @@ article.post_format-post-format-video{
 }
 //style for the quote post
 article.post_format-post-format-quote{
-	margin-bottom: 100px;
-	width: 80%;
-	left: 10%;
 	padding-top: 60px;
-	padding-bottom: 80px;
-	position: relative;
-	background-color: @color8;
-	box-shadow: 1px 0px 2px 2px #eceef1;
 	.entry-content{
 		padding-left: 80px;
 		width: 80%;
@@ -178,13 +161,6 @@ article.post_format-post-format-quote{
 	}
 }
 article.post_format-post-format-audio{
-	margin-bottom: 100px;
-	background-color: @color8;
-	width: 80%;
-	position: relative;
-	padding-bottom: 80px;
-	left: 10%;
-	box-shadow: 1px 0px 2px 2px #eceef1;
 	.entry-content{
 		padding-left: 80px;
 		width: 80%;
@@ -239,6 +215,53 @@ article.post_format-post-format-audio{
 		box-shadow: 1px 0px 2px 2px #eceef1;
 		a{
 			color: @color1;
+		}
+	}
+}
+article.post_format-post-format-gallery{	
+	padding-bottom: 80px;
+	.carousel .carousel-item {
+		display: none;
+		width: 80%;
+		height: 400px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.carousel .carousel-item img {
+		width: 100%;
+	}
+	header.entry-header{
+		position: relative;	
+		padding-top: 50px;
+		.post-type{
+			margin-top: -30px;
+		}
+		h1{
+			width: 96%;
+			padding-left: 80px;
+			padding-bottom: 10px;
+			padding-right: 50px;	
+		}
+		.entry-meta{
+			position: absolute;
+			top: 20%;
+			padding-left: 80px;
+			padding-bottom: 50px;
+		}
+		img.title-seperator{
+			padding-left: 80px;
+		}
+	}
+	.entry-content{
+		width:85%;
+		padding-left: 80px;
+		.gallery{
+			display: none;
+		}
+		.entry-tag{
+			margin-top: -20px;
+			float: right;
 		}
 	}
 }

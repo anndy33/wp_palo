@@ -13,6 +13,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+ <!-- Compiled and minified CSS -->
+
+
+ 
 <?php wp_head(); ?>
 </head>
 
@@ -28,10 +32,10 @@
 					</div><!-- .site-branding -->
 				</div>
 				<div class="col-md-7">
-					<nav id="site-navigation" class="main-navigation" role="navigation">
+					<div id="site-navigation" class="main-navigation" role="navigation">
 						<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', '_s' ); ?></button>
 						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-					</nav><!-- #site-navigation -->
+					</div><!-- #site-navigation -->
 				</div>
 				<div class="col-md-2">
 					<i class="fa fa-search" aria-hidden="true"><?php get_search_form(); ?></i>			
