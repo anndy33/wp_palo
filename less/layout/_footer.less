@@ -43,6 +43,24 @@ footer#colophon{
 		margin-top: -27px;
 		.search-form{
 			display: none;
+		}&:hover{
+			.search-form{
+				float: right;
+				margin-right: 0;
+				display: block;
+				margin-top: -25px;
+				input.search-field{
+					height: 30px;
+					width: 125%;
+				}
+				input.search-submit {
+					display: none;
+					position: absolute;
+					float: right;
+					right: 0;
+					top: -5px;
+				}
+			}
 		}
 	}
 	.copyright {

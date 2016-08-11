@@ -2545,22 +2545,14 @@ input[type="number"]::-webkit-outer-spin-button {
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
  */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  box-sizing: content-box;
-  /* 2 */
-}
+
 
 /**
  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
+
 
 /**
  * Define consistent border, margin, and padding.
@@ -5632,7 +5624,7 @@ input[type=datetime],
 input[type=datetime-local],
 input[type=tel],
 input[type=number],
-input[type=search],
+
 textarea.materialize-textarea {
   background-color: transparent;
   border: none;
@@ -5670,8 +5662,7 @@ input[type=tel]:disabled,
 input[type=tel][readonly="readonly"],
 input[type=number]:disabled,
 input[type=number][readonly="readonly"],
-input[type=search]:disabled,
-input[type=search][readonly="readonly"],
+
 textarea.materialize-textarea:disabled,
 textarea.materialize-textarea[readonly="readonly"] {
   color: rgba(0, 0, 0, 0.26);
@@ -5699,9 +5690,7 @@ input[type=datetime-local][readonly="readonly"] + label,
 input[type=tel]:disabled + label,
 input[type=tel][readonly="readonly"] + label,
 input[type=number]:disabled + label,
-input[type=number][readonly="readonly"] + label,
-input[type=search]:disabled + label,
-input[type=search][readonly="readonly"] + label,
+
 textarea.materialize-textarea:disabled + label,
 textarea.materialize-textarea[readonly="readonly"] + label {
   color: rgba(0, 0, 0, 0.26);
@@ -5718,7 +5707,6 @@ input[type=datetime]:focus:not([readonly]),
 input[type=datetime-local]:focus:not([readonly]),
 input[type=tel]:focus:not([readonly]),
 input[type=number]:focus:not([readonly]),
-input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
   border-bottom: 1px solid #26a69a;
   box-shadow: 0 1px 0 0 #26a69a;
@@ -5735,7 +5723,6 @@ input[type=datetime]:focus:not([readonly]) + label,
 input[type=datetime-local]:focus:not([readonly]) + label,
 input[type=tel]:focus:not([readonly]) + label,
 input[type=number]:focus:not([readonly]) + label,
-input[type=search]:focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
   color: #26a69a;
 }
@@ -5761,8 +5748,6 @@ input[type=tel].valid,
 input[type=tel]:focus.valid,
 input[type=number].valid,
 input[type=number]:focus.valid,
-input[type=search].valid,
-input[type=search]:focus.valid,
 textarea.materialize-textarea.valid,
 textarea.materialize-textarea:focus.valid {
   border-bottom: 1px solid #4CAF50;
@@ -5791,8 +5776,6 @@ input[type=tel].valid + label:after,
 input[type=tel]:focus.valid + label:after,
 input[type=number].valid + label:after,
 input[type=number]:focus.valid + label:after,
-input[type=search].valid + label:after,
-input[type=search]:focus.valid + label:after,
 textarea.materialize-textarea.valid + label:after,
 textarea.materialize-textarea:focus.valid + label:after {
   content: attr(data-success);
@@ -5821,8 +5804,6 @@ input[type=tel].invalid,
 input[type=tel]:focus.invalid,
 input[type=number].invalid,
 input[type=number]:focus.invalid,
-input[type=search].invalid,
-input[type=search]:focus.invalid,
 textarea.materialize-textarea.invalid,
 textarea.materialize-textarea:focus.invalid {
   border-bottom: 1px solid #F44336;
@@ -5851,8 +5832,6 @@ input[type=tel].invalid + label:after,
 input[type=tel]:focus.invalid + label:after,
 input[type=number].invalid + label:after,
 input[type=number]:focus.invalid + label:after,
-input[type=search].invalid + label:after,
-input[type=search]:focus.invalid + label:after,
 textarea.materialize-textarea.invalid + label:after,
 textarea.materialize-textarea:focus.invalid + label:after {
   content: attr(data-error);
@@ -5871,7 +5850,6 @@ input[type=datetime].validate + label,
 input[type=datetime-local].validate + label,
 input[type=tel].validate + label,
 input[type=number].validate + label,
-input[type=search].validate + label,
 textarea.materialize-textarea.validate + label {
   width: 100%;
   pointer-events: none;
@@ -5888,7 +5866,6 @@ input[type=datetime] + label:after,
 input[type=datetime-local] + label:after,
 input[type=tel] + label:after,
 input[type=number] + label:after,
-input[type=search] + label:after,
 textarea.materialize-textarea + label:after {
   display: block;
   content: "";
@@ -5966,41 +5943,8 @@ textarea.materialize-textarea + label:after {
   }
 }
 
-/* Search Field */
-.input-field input[type=search] {
-  display: block;
-  line-height: inherit;
-  padding-left: 4rem;
-  width: calc(100% - 4rem);
-}
 
-.input-field input[type=search]:focus {
-  background-color: #fff;
-  border: 0;
-  box-shadow: none;
-  color: #444;
-}
 
-.input-field input[type=search]:focus + label i,
-.input-field input[type=search]:focus ~ .mdi-navigation-close,
-.input-field input[type=search]:focus ~ .material-icons {
-  color: #444;
-}
-
-.input-field input[type=search] + label {
-  left: 1rem;
-}
-
-.input-field input[type=search] ~ .mdi-navigation-close,
-.input-field input[type=search] ~ .material-icons {
-  position: absolute;
-  top: 0;
-  right: 1rem;
-  color: transparent;
-  cursor: pointer;
-  font-size: 2rem;
-  transition: .3s color;
-}
 
 /* Textarea */
 textarea {
