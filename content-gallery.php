@@ -7,28 +7,31 @@
 	<div class="row">
 		<div class="col-md-12">
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<?php
-					/* Get Id img in Gallery in to make SliderShow */
-					$gallery = get_post_gallery( $post, false );
-					if( isset($gallery)  && !empty($gallery) ):
-					$ids = explode( ",", $gallery['ids'] );
-					echo '<div class="carousel">';
-						//echo '<div id="owl-demo" class="owl-carousel owl-theme">';
-						foreach( $ids as $id ) { 
-						$link = wp_get_attachment_url( $id );
-						?>
-			       		 <a class="carousel-item" href="">
-			       		 <img src="<?php echo esc_url( $link); ?>" alt="Chania" width="460" height="345">
-			       		 </a>						
+					<div class="ga_slider">
 						<?php
-						}
-						//echo '</div>';
-					echo '</div>';
-					endif;
-					/* End Get Id img in Gallery in to make SliderShow */
-					?>
+						/* Get Id img in Gallery in to make SliderShow */
+						$gallery = get_post_gallery( $post, false );
+						if( isset($gallery)  && !empty($gallery) ):
+						$ids = explode( ",", $gallery['ids'] );
+						echo '<div class="carousel">';
+							//echo '<div id="owl-demo" class="owl-carousel owl-theme">';
+							foreach( $ids as $id ) { 
+							$link = wp_get_attachment_url( $id );
+							?>
+				       		 <a class="carousel-item" href="">
+				       		 <img src="<?php echo esc_url( $link); ?>" alt="Chania" width="460" height="345">
+				       		 </a>						
+							<?php
+							}
+							//echo '</div>';
+						echo '</div>';
+						endif;
+						/* End Get Id img in Gallery in to make SliderShow */
+						?>
+					</div>
 					<!--this class help image is displayed-->
 					<header class="entry-header">
+						
 						<div class="post-type">
 							<?php ngothuong_post_format_type(); ?>
 						</div>					

@@ -15,7 +15,7 @@
 			<?php ngothuong_entry_meta(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
-	<img src="<?php echo get_template_directory_uri(); ?>/images/post-seperator.png" alt="" width="90%"/>
+	<img class="title-seperator" src="<?php echo get_template_directory_uri(); ?>/images/post-seperator.png" alt="" width="90%"/>
 	<div class="entry-content">
 		<?php ngothuong_entry_content(); ?>				
 		<?php

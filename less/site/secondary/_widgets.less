@@ -11,25 +11,107 @@
 .widget_search .search-submit {
 	display: none;
 }
-footer.entry-footer{
-	.entry-tag{
-		float: right;
-		margin-right: 80px;
+
+
+article.archive, article.about{
+	background-color: @color8;
+	box-shadow: 1px 0px 2px 2px #eceef1;
+	width: 85%;
+	margin-left: 6%;
+	padding-bottom: 80px;
+	margin-bottom: 100px;
+	padding-top: 80px;
+	.entry-content {
+	    padding-left: 80px;
+	    width: 90%;
+	    p{
+	    	padding-bottom: 0;
+	    }
 	}
-	.comment-no {
-    	color: #000;
-    	font-weight: bold;
-    	text-transform: capitalize;
+}	
+.widget h1.widget-title{
+	font-size: 30px;
+	text-transform: capitalize;	
+	color: @color9;
+	font-family: "Lato Bold";
+}
+aside.widget ul{
+	margin-left: 0;
+}
+.widget ul li a, .widget ul li{
+	line-height: 180%;
+	font-size: 17px;
+	text-transform: capitalize;
+	font-family: "Lato Bold";
+	color: @color10;
+}
+article.archive{
+	aside#recent-posts-3{
+		width: 45%;
+		float: right;
+		margin-top: -5%;
+		
+	}
+	aside#recent-comments-3 {
+		width: 45%;
+		
+	}
+	aside#categories-2{
+		width: 45%;
+	}
+	aside#archives-3{
+		float: right;
+		width: 45%;
+		margin-top: -100%;
 	}
 }
-ul#menu-menu-icon-single {
-    list-style-type: none;
-    display: flex;
-    margin-left: 0;
-   li.menu-item{
-   	margin-right: 30px;
-   	a{
-   		color: @color2;
-   	}
-   }
+form.wpcf7-form{
+	span.name-email{
+
+		.name{
+			float: left;
+			border: none;
+		}
+		.email{
+			float: right;
+			margin-right: 0;
+			margin-top: -30px;
+			border: none;
+		}
+		.name, .email{
+			width: 45%;
+			background-color: #f7f9fc;
+			padding-left: 20px;
+			font-size: 20px;
+			color: #cacbcd;
+		}
+	}
+	.subject{
+		border: none;
+		width: 97%;
+		padding-left: 20px;
+		background-color: #f7f9fc;
+		margin-bottom: 50px;
+		font-size: 20px;
+		color: #cacbcd;
+	}
+	.message{
+		border: none;
+		height: 145px;
+		margin-bottom: 50px;
+		padding-left: 20px;
+		background-color: #f7f9fc;
+		font-size: 20px;
+		color: #cacbcd;
+
+	}
+	.submit{
+		font-size: 24px;
+		text-transform: uppercase;
+		color: #5c6bc0;
+		font-family: "Lato Bold";
+		background: #ffffff;
+		box-shadow: none;
+		border: none;
+	}
 }

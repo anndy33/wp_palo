@@ -1,3 +1,8 @@
+.row, .container{
+	display: block !important;
+	content: '';
+}
+
 .sticky {
 	display: block;
 }
@@ -33,23 +38,24 @@ article.post{
 	padding-bottom: 80px;
 	background-color: @color8;
 	margin-bottom: 100px;
+	width: 85%;
+	margin-left: 8%;
 }
 article.format-standard{
 	padding-left: 90px;	
 	padding-top: 60px;	
 	header.entry-header {	
+		position: relative;	
 		h1{
-			width: 90%;
-			padding-bottom: 10px;
-			padding-right: 50px;	
-		}		
+			padding-left: 0;
+		}
 		.post-type{
 			margin-top: -50px;
 		}
 	}
 	.entry-meta{
 		position: absolute;
-		top: 50px;
+		top: -30px;
 	}	
 	.entry-content{	
 		width: 90%;
@@ -63,7 +69,6 @@ article.format-standard{
 article.post_format-post-format-image{
 	.entry-thumbnail{
 		figure.post-thumbnail{
-			
 			img{
 				width: 100%;
 				height: auto;
@@ -77,12 +82,6 @@ article.post_format-post-format-image{
 		padding-top: 50px;
 		.post-type{
 			margin-top: -30px;
-		}
-		h1{
-			width: 96%;
-			padding-left: 80px;
-			padding-bottom: 10px;
-			padding-right: 50px;	
 		}
 		.entry-meta{
 			position: absolute;
@@ -120,12 +119,6 @@ article.post_format-post-format-video{
 		padding-top: 50px;
 		.post-type{
 			margin-top: -50px;
-		}
-		h1{
-			width: 96%;
-			padding-left: 80px;
-			padding-bottom: 10px;
-			padding-right: 50px;	
 		}
 		.entry-meta{
 			position: absolute;
@@ -175,12 +168,6 @@ article.post_format-post-format-audio{
 		.post-type{
 			margin-top: -50px;
 		}
-		h1{
-			width: 96%;
-			padding-left: 80px;
-			padding-bottom: 10px;
-			padding-right: 50px;	
-		}
 		.entry-meta{
 			position: absolute;
 			top: 20%;
@@ -220,28 +207,31 @@ article.post_format-post-format-audio{
 }
 article.post_format-post-format-gallery{	
 	padding-bottom: 80px;
+	.carousel{
+		perspective: 200px;
+		height: 680px;
+	}
+	.ga_slider{
+		height: 550px;
+	}
 	.carousel .carousel-item {
 		display: none;
-		width: 80%;
-		height: 400px;
+		width: 700px;
+		height: 800px;
 		position: absolute;
 		top: 0;
 		left: 0;
+		margin-top: 0;
 	}
 	.carousel .carousel-item img {
 		width: 100%;
+		height: auto;
 	}
 	header.entry-header{
 		position: relative;	
 		padding-top: 50px;
 		.post-type{
 			margin-top: -30px;
-		}
-		h1{
-			width: 96%;
-			padding-left: 80px;
-			padding-bottom: 10px;
-			padding-right: 50px;	
 		}
 		.entry-meta{
 			position: absolute;
@@ -263,5 +253,48 @@ article.post_format-post-format-gallery{
 			margin-top: -20px;
 			float: right;
 		}
+	}
+}
+.single{
+	#primary{
+		article.post{
+			padding-top: 60px;
+			width: 60%;
+			margin-left: 20%;
+			// img.title-seperator{
+			// 	padding-left: 80px;
+			// }
+		}
+		article.format-standard{
+			.comment-no{
+				margin-left: 0;
+			}
+			ul#menu-menu-icon-single{
+				margin-left: 0;
+			}
+		}
+	}
+	footer.entry-footer{
+		.entry-tag{
+			float: right;
+			margin-right: 80px;
+		}
+		.comment-no{
+	    	color: #000;
+	    	font-weight: bold;
+	    	text-transform: capitalize;
+	    	margin-left: 80px;
+		}
+	}
+	ul#menu-menu-icon-single{
+	    list-style-type: none;
+	    display: flex;
+	    margin-left: 80px;
+	   li.menu-item{
+	   		margin-right: 30px;
+		   	a{
+		   		color: @color2;
+		   	}
+	   }
 	}
 }
