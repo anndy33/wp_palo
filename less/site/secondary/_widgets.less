@@ -29,40 +29,28 @@ article.archive, article.about{
 	    }
 	}
 }	
-.widget h1.widget-title{
-	font-size: 30px;
+article.archive{
+	h1{
+		font-size: 30px;
 	text-transform: capitalize;	
 	color: @color9;
 	font-family: "Lato Bold";
-}
-aside.widget ul{
-	margin-left: 0;
-}
-.widget ul li a, .widget ul li{
-	line-height: 180%;
-	font-size: 17px;
-	text-transform: capitalize;
-	font-family: "Lato Bold";
-	color: @color10;
-}
-article.archive{
-	aside#recent-posts-3{
-		width: 45%;
-		float: right;
-		margin-top: -5%;
+	}
+	li, li a{
+		line-height: 180%;
+		font-size: 17px;
+		text-transform: capitalize;
+		font-family: "Lato Bold";
+		color: @color10;
+		list-style-type: none;
+	}
+	.left{
+		float: left;
 		
 	}
-	aside#recent-comments-3 {
-		width: 45%;
-		
-	}
-	aside#categories-2{
-		width: 45%;
-	}
-	aside#archives-3{
+	.right{
 		float: right;
-		width: 45%;
-		margin-top: -100%;
+		
 	}
 }
 form.wpcf7-form{
