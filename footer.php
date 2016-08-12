@@ -12,11 +12,21 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			<i class="fa fa-search" aria-hidden="true"><?php get_search_form(); ?></i>	
+			<div class="ft-description">
+				<?php 
+				 	global $tp_options;
+					echo  $tp_options['description-above'] ;
+				 ?>
+			</div>
 			<div class="copyright">
-			        © <?php echo date('Y'); ?> <?php bloginfo( 'sitename' ); ?>. <?php _e('All Rights Reserved', 'thachpham'); ?>. <?php _e('Designed & Developed by <b>PixelBuddha Team</b>', 'thachpham'); ?>
+				<?php 
+					global $tp_options;
+					echo  $tp_options['copyright-ft'] ;
+				?>
 			</div>
 			<div class="social-ft">
 				<?php wp_nav_menu( array( 'theme_location' => 'menu-icon' ) ); ?>

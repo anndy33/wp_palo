@@ -4,7 +4,19 @@
  *
  * @package _s
  */
-
+/*
+@Declare constant 
+  @THEME_URL : lay dan thu muc theme
+  @CORE : lay duong dan thu muc core
+*/
+  define( 'THEME_URL', get_stylesheet_directory() );
+  define( 'CORE', THEME_URL . '/core' );
+/*
+  @Nhung file 
+  @ Load file /core/init.php
+  @ Đây là file cấu hình ban đầu của theme mà sẽ không nên được thay đổi sau này.
+*/
+require_once( CORE . '/init.php' );
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -282,6 +294,50 @@ function page_nav() {
 
   // echo '</ul></div>' . "\n";
 
+}
+/*
+@ Thiết lập hàm hiển thị logo
+@ thachpham_logo()
+**/
+if ( ! function_exists( 'thachpham_logo' ) ) {
+  function thachpham_logo() {?>
+    <?php
+      global $tp_options;
+    ?>
+ 
+    <?php if ( $tp_options['logo-on'] == 1 ) : ?>
+ 
+      <div class="logo">
+        <img src="<?php echo $tp_options['logo-image']['url']; ?>">
+      </div>
+ 
+    <?php else : ?>
+ 
+      <div class="logo">
+ 
+        <div class="site-name">
+          <?php if ( is_home() ) {
+            printf(
+              '<h1><a href="%1$s" title="%2$s">%3$s</a></h1>',
+              get_bloginfo( 'url' ),
+              get_bloginfo( 'description' ),
+              get_bloginfo( 'sitename' )
+            );
+          } else {
+            printf(
+              '<a href="%1$s" title="%2$s">%3$s</a>',
+              get_bloginfo( 'url' ),
+              get_bloginfo( 'description' ),
+              get_bloginfo( 'sitename' )
+            );
+          } // endif ?>
+        </div>
+        <div class="site-description"><?php bloginfo( 'description' ); ?></div>
+ 
+      </div>
+ 
+      <?php endif;
+  }
 }
 /**
  * Enqueue scripts and styles.

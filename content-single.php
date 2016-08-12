@@ -32,6 +32,10 @@
 		<div class="comment-no">
 			<?php $totalcomments = get_comments_number(); echo $totalcomments." comments"; ?>	
 		</div>
+		<div class="cm-post">
+				<?php comment_form(); ?>
+		</div>
 		<?php wp_nav_menu( array( 'theme_location' => 'menu-icon-single' ) ); ?>	
+
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
